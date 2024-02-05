@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ForecastsController < ApplicationController
-  def get_forecast
+  def create
     response = ForecastService.new(params).run
     @current_forecast = response[:current_forecast]
     @future_forecast = response[:future_forecast]

@@ -1,5 +1,5 @@
 <h1>Weather Forecast</h1>
-<%= form_tag(forecasts_get_forecast_path, method: :post, turbo: true) do %>
+<%= form_tag(forecasts_path, method: :post, turbo: true) do %>
   <%= label_tag :address, 'Enter Address:' %>
   <%= text_field_tag :address %>
   <%= submit_tag 'Get Forecast' %>
