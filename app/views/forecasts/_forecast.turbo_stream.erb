@@ -1,11 +1,15 @@
 <% if current_forecast %>
+
   <h1>Cached Results: <%= cached %></h1>
+
   <h1> Current Forecast </h1>
   <p>Temperature: <%= current_forecast[:temperature] %></p>
   <p>Min: <%= current_forecast[:min] %></p>
   <p>Max: <%= current_forecast[:max] %></p>
+
   <h1> Future Forecast </h1>
   <%= render partial: 'forecast_item', collection: future_forecast, as: :forecast_item %>
+
 <% else %>
   <p>No forecast available for this address, Please try a different address</p>
 <% end %>
