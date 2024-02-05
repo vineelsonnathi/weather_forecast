@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+3.1.4
 
 * System dependencies
 
@@ -20,5 +21,12 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+1. Clone the repository
+2. use the branch `weather_forecast`
+3. enable caching in development environment `rails dev:cache`
+4. start the server using `rails s`
+5. in a browser window, type `localhost:3000`
+6. Enter an address and click on get forecast
+7. You will see the data.
 
 * ...
