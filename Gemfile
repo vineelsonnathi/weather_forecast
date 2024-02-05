@@ -12,6 +12,15 @@ gem "sprockets-rails"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
+# for saving environment variables
+gem 'dotenv'
+
+# For Address Lookup to get latitude and longitude
+gem 'geocoder'
+
+# Open weather api gem
+gem 'open-weather', github: 'vineelsonnathi/ruby_open_weather_map', branch: 'master'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -51,6 +60,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -62,11 +72,12 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
 end

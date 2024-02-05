@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/vineelsonnathi/ruby_open_weather_map.git
+  revision: 234073e069d35c0e2f89101c0d499c512d89f559
+  branch: master
+  specs:
+    open-weather (0.12.0)
+      json (~> 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -83,6 +91,7 @@ GEM
     bootsnap (1.18.3)
       msgpack (~> 1.2)
     builder (3.2.4)
+    byebug (11.1.3)
     capybara (3.40.0)
       addressable
       matrix
@@ -92,6 +101,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    coderay (1.1.3)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crass (1.0.6)
@@ -99,9 +109,12 @@ GEM
     debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    dotenv (2.8.1)
     drb (2.2.0)
       ruby2_keywords
+    error_highlight (0.6.0)
     erubi (1.12.0)
+    geocoder (1.8.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -117,6 +130,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    json (2.7.1)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -127,6 +141,7 @@ GEM
       net-smtp
     marcel (1.0.2)
     matrix (0.4.2)
+    method_source (1.0.0)
     mini_mime (1.1.5)
     minitest (5.21.2)
     msgpack (1.7.2)
@@ -145,6 +160,12 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
+    pry (0.14.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.10.1)
+      byebug (~> 11.0)
+      pry (>= 0.13, < 0.15)
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
@@ -245,8 +266,13 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dotenv
+  error_highlight (>= 0.4.0)
+  geocoder
   importmap-rails
   jbuilder
+  open-weather!
+  pry-byebug
   puma (~> 5.0)
   rails (~> 7.1.2)
   redis (~> 4.0)
