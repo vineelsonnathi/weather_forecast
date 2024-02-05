@@ -1,0 +1,7 @@
+<%= turbo_stream.update "forecast_results" do %>
+  <%= render partial: "forecast", locals: { 
+    current_forecast: @current_forecast, 
+    future_forecast: @future_forecast, 
+    cached: @cached } 
+  %>
+<% end %>
